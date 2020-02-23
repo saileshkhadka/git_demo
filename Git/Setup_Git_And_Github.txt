@@ -1,0 +1,32 @@
+
+# If you’ve never used git or github before, there are a bunch of things that you need to do..
+1. Get your signup on Github account.
+2. Download and install git to your local machine, you can get Git from url: https://git-scm.com/downloads
+3. Setup git username and email for first use: 
+	
+	Open terminal/bash and type 
+	$ git config --global user.name "Your name here"  => It will configured your username
+	$ git config --global user.email "your_email@example.com" => It will configured your user email.
+
+4. Setup SSH on your local machine using git bash.
+	$ ssh-keygen -t rsa -C "username here"
+	
+5. Copy your public key (the contents of the newly-created id_rsa.pub file)
+
+6. Paste your ssh public key into your github account settings i.e,
+	Go to your github Account Settings
+	Click "SSH Keys" on the left.
+	Click "Add SSH Key" on the right.
+	Add a label and paste the public key into the text box.
+7. In a terminal/shell, type the following to test it:
+	$ ssh -T git@github.com
+	
+8. If it says something like the following, it worked:
+
+	Hi username! You've successfully authenticated, but Github does not provide shell access.
+	
+9. 	git remote
+	$ git remote –v
+	
+# to connect to local repository
+	$ git remote add origin <host-or-remoteURL>

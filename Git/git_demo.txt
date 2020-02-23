@@ -1,0 +1,80 @@
+# Basic git commands
+
+# list all branches
+ $ git branch -a
+
+# remote branches
+	$ git branch -r	
+
+# checkout a branch on remote make sure you don't use origin
+	$ git fetch
+	$ git checkout branchName
+
+# Create a new branch
+#first create a branch
+	$ git checkout -b <branchName>	
+
+# Create a new branch from an existing branch
+	$ git checkout origin/branchName -b newBranchName
+
+# Then push your new branch to the repo
+	$ git push origin <branchName>
+
+# revert all changes in a branch. Removes staged and working directory changes.
+	$ git reset --hard	
+
+# Resets index to former commit; replace #sha hash with your commit code. You can use git log to get commit code
+	$ git reset 56e05fced
+
+# undo the last commit. Blow it out of the water.
+	$ git reset --hard HEAD~1	
+
+# delete local (untracked) files
+	$ git clean -f
+
+# If you want to also remove directories, run
+#	$ git clean -f -d
+
+# clean a folder
+	$ git clean -fxd {dir_path}	
+
+# commit a folder/file without staging it.
+	$ git commit /folderToCommit -m 'commit msg'	
+
+# display log
+	$ git log --pretty -show --oneline graph
+	
+# Recover a deleted branch
+#Get the SHA of the last commit on the branch.
+	$ git checkout -b newbranchname 56e05fced
+
+#You can stash your changes and checkout to another branch also.
+
+# save a stash
+	$ git stash save "My changes."
+
+# list your saved stashes
+	$ git stash list
+
+# apply a stash (Where stash@{1} is the stash you want to apply.)
+	$ git stash apply stash@{1}	
+	
+# delete a branch on origin
+	$ git push origin --delete <branchName>
+
+# delete a branch locally
+	$ git branch -d <branchName>	
+
+# Get all commits from a branch. For a release log, changelog etc.
+	$ git cherry-pick #sha_hash
+
+# Revert a commit that is origin/remote This reverts the commit with a new commit.
+
+	#First get the commit sha.
+
+	$ git revert -m 1 <commit-hash> 
+	$ git commit -m "Reverting the last commit which messed the repo."
+	$ git push -u origin master	
+
+		
+		

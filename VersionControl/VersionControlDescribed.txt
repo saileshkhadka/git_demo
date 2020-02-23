@@ -1,0 +1,63 @@
+What is version control system?
+
+A system for managing changes made to  documents and other files.
+	-A system that keeps records of your changes.
+	-working with the team of developers.
+	-Allows for collaborative development.
+	-Allows you to know who made what changes and when...
+	-Allows you to revert any changes and go back to previous state.
+	
+
+Why use VCs?
+	Using version control will allow multiple developers to work on the same file at the same time,
+	when they have completed their code changes they will commit them back into the repository.
+	Version control will record who wrote a piece of code, which means if there is a piece of code that your not sure 
+	why it's there, you can use version control to check the code to tell you which developer wrote this so you can ask the developer to explain the reasons
+	why it's there.
+
+Why git?
+GIT has multiple repositories, one central repository and each developer has their own repository. The benefits of splitting it up into multiple repositories is that there is no longer one single point of failure.
+-can be complicated at first, but the are few key concepts which makes you easy to use.
+
+Git has normally three states:
+Commited:
+
+	* Committed means that the data is safely stored in your local database.
+
+Modified:
+
+	* Modified means that you have changed the file but have not committed it to your database yet.
+
+
+Staged:
+
+	* Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+
+
+#Workflow is described here but image is located in next dir
+	# The basic Git workflow goes something like this:
+
+	1. You modify files in your working tree.
+
+	2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+
+	3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+
+Difference between Git and SVN.
+- GIT and SVN are quite similar but the workflow is a bit different. 
+ SVN has one central repository, but GIT has multiple repositories, one central repository but each developer has their own repository.
+ ( The benefits of splitting it up into multiple repositories is that there is no longer one single point of failure)
+
+GIT as each developer has the own repository it doesn't matter if the master repository is broke they can continue to commit code locally,
+ until the master repository is fixed and then they can push their code into the master repository. Another benefit of having a local repository
+ is that it is quick, there is no network traffic needed to commit code into source control, developers can work in isolation until ready to push
+ the code to the master repository. 
+
+
+SVN or Subversion is very popular due to the fact that it's very easy to understand and very straight forward to work with.
+ The WordPress plugin repository uses SVN. It works by having a central server for your repository,
+ this repository is split into 3 key areas...Trunk, Branches and Tags.
+
+	
+	
