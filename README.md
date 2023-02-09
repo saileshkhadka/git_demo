@@ -4,6 +4,6 @@
 # git_demo
 	#for more information on git please visit 
 	
-	https://prezi.com/e1pn09kjjlgm/simplified-gitflow/?webgl=0
+	https://prezi.com/view/LESHnvgTIkmNL6SqMoSi/
 	
 	
